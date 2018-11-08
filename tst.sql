@@ -27,7 +27,7 @@ CREATE TABLE `reviews` (
   `name` char(30) NOT NULL,
   `review` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `reviews` (
 
 LOCK TABLES `reviews` WRITE;
 /*!40000 ALTER TABLE `reviews` DISABLE KEYS */;
-INSERT INTO `reviews` VALUES (1,'Роман','Первый отзыв будет от меня!'),(2,'Бабайка','Всё отлично, давайте ещё'),(3,'Бильбо Беггинс','Домой хочу!'),(4,'Анатолий','А мне не понравилось... Сколько можно уже ходить кругами, верните мне моё время!'),(5,'Иван','Пойдёт.'),(6,'Антон','Ну не знаю... Вроде и понравилось, но всё равно как будто чего-то не хватает...\r\n\r\nКороче, надо ещё пробовать');
+INSERT INTO `reviews` VALUES (1,'Роман','Первый отзыв будет от меня!'),(2,'Бабайка','Всё отлично, давайте ещё'),(3,'Бильбо Беггинс','Домой хочу!'),(4,'Анатолий','А мне не понравилось... Сколько можно уже ходить кругами, верните мне моё время!'),(5,'Иван','Пойдёт.'),(6,'Антон','Ну не знаю... Вроде и понравилось, но всё равно как будто чего-то не хватает...\r\n\r\nКороче, надо ещё пробовать'),(7,'Петрович','Ничего не помню'),(8,'Яша',' было прикольно, ещё хочу'),(10,'Савелий','А шо было бы, коли неба не было бы?');
 /*!40000 ALTER TABLE `reviews` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -72,4 +72,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-08 16:31:20
+-- Dump completed on 2018-11-08 16:53:48

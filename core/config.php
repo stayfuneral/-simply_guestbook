@@ -22,9 +22,9 @@ function insert_review() {
     if(isset($submit)) {
         $sql = "INSERT INTO reviews (name, review)
                 VALUES ('$name', '$review')";
-        $insert = mysqli_query($connection, $sql);
-        echo 'Ваш отзыв добавлен! Для того, чтобы его увидеть, обновите страницу';
-    }   
+        $insert = mysqli_query($connection, $sql); ?>
+        <p>Ваш отзыв добавлен! Для того, чтобы его увидеть, <a href="/">обновите страницу</a></p>
+    <?php }   
 }
 
 function review_list() {

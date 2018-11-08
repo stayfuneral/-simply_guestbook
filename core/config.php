@@ -8,8 +8,27 @@ function sitename() {
     $sql    = "SELECT * FROM sitename";
     $query  = mysqli_query($connection, $sql);
     $result = mysqlI_fetch_assoc($query);
+    if ($_SERVER['REQUEST_URI'] == "/backstage/") {
+        echo $result['title'] . ' - Админка';
+    }
+    else {
+        echo $result['title'];
+    }
+    
+}
 
-    echo $result['title'];
+$title  = $_POST['title'];
+$update_btn = $_POST['update'];
+
+function sitename_upd() {
+    global $connection, $title, $update_btn;
+
+    if(isset($update_btn)) {
+        $sql = "UPDATE sitename SET title='$title'";
+        $upd = mysqli_query($connection, $sql); ?>
+        <p>Вы поменяли название сайта! Для того, чтобы увидеть изменения, <a href="<?php echo $_SERVER['REQUEST_URI']?>">обновите страницу</a></p>
+    <?php 
+        }
 }
 
 $name   = $_POST['name'];
@@ -23,7 +42,7 @@ function insert_review() {
         $sql = "INSERT INTO reviews (name, review)
                 VALUES ('$name', '$review')";
         $insert = mysqli_query($connection, $sql); ?>
-        <p>Ваш отзыв добавлен! Для того, чтобы его увидеть, <a href="/">обновите страницу</a></p>
+        <p>Ваш отзыв добавлен! Для того, чтобы его увидеть, <a href="<?php echo $_SERVER['REQUEST_URI']?>">обновите страницу</a></p>
     <?php }   
 }
 
